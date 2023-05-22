@@ -14,3 +14,6 @@ python3 -m venv .venv
 > Activa el entorno virtual en Windows
 
 instalar Dependencias del Requirements.txt
+
+makemigrations
+migrate
