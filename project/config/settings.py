@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import sys
 
+#! Sirve para generar la clave secreta para el proyecto
+from django.core.management.utils import get_random_secret_key
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,12 +30,14 @@ sys.path.append(str(APPS_DIR))
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-!o9tj5+p*w2gqf$r92+5=(1#h3-*=o$40u!hvdbs2-$lig4p)d"
+# SECRET_KEY = "django-insecure-!o9tj5+p*w2gqf$r92+5=(1#h3-*=o$40u!hvdbs2-$lig4p)d"
+#! Se agrega una cadena de forma aleatoria
+SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -44,6 +49,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+]
+
+INSTALLED_APPS += [
     "GradeApp",
     "crispy_forms",
     "crispy_bootstrap5",

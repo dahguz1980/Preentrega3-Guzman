@@ -71,4 +71,4 @@ class Grade(models.Model):
         verbose_name_plural = "Grades"
 
     def __str__(self):
-        return self.student + " " + self.subject + " " + str(self.grade)
+        return self.student.name + " " + self.student.lastname + " " + self.subject.name + " " + str(self.grade)
