@@ -17,3 +17,6 @@ instalar Dependencias del Requirements.txt
 
 makemigrations
 migrate
+
+
+py manage.py collectstatic
