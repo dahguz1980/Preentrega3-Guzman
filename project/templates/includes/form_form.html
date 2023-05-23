@@ -1,0 +1,12 @@
+{% load crispy_forms_tags %}
+
+<div style="width: 50%;margin: 0 auto;">
+    <form class="row g-3 needs-validation" novalidate method="POST">
+      {% csrf_token %}
+      {{form|crispy }}
+      <div class="col-3">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a  class="btn btn-secondary" href="{% url return_link %}">Cancelar</a>     
+      </div>
+    </form>
+  </div>

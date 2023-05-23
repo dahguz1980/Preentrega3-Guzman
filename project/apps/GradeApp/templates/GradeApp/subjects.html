@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block CONTENT %}
+
+<div style="margin: 15px auto; width: 80%;text-align: center;">
+
+    {% include 'includes/form_titles.html' with title='Administrar Materias' subtitle="" %}
+
+    {% include 'includes/form_links.html' with add_link='GradeApp:add_subject' add_label="+ Agregar Nueva Materia" %}
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for subject in subjects %}
+            <tr>
+                <th scope="row">{{subject.id}}</th>
+                <td>{{subject.name}}</td>
+                <td>{{subject.description}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

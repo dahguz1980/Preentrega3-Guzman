@@ -6,6 +6,7 @@ class Subject(models.Model):
 
     name = models.CharField(max_length=50)
     description = models.TextField()
+    teacher = models.ForeignKey("Teacher", on_delete=models.CASCADE)
 
     class Meta:
         """Meta definition for Subject."""
@@ -25,9 +26,6 @@ class Teacher(models.Model):
     name = models.CharField(max_length=50)
     lastname = models.CharField(max_length=50)
     email = models.EmailField()
-    username = models.CharField(max_length=50)
-    password = models.CharField(max_length=100)
-    Subject = models.CharField(max_length=50)
 
     class Meta:
         """Meta definition for Teacher."""
