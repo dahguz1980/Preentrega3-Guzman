@@ -1,22 +1,43 @@
-# Preentrega3-Guzman
+# Preentrega3-Guzman - CODERHOUSE
 
-1.- Crear entorno Virtual
+Sistema que permite gestionar las calificaciones de los estudiantes. 
 
-python -m venv .venv
-python3 -m venv .venv
+## CONFIGURACIÓN
 
-2.- Activar el entorno virtual
+1. Clonar el Repositorio
 
-`source .venv/bin/activate`
-> Activa el entorno virtual en Linux o Mac
+> `git clone https://github.com/dahguz1980/Preentrega3-Guzman.git`
 
-`.\venv\Scripts\activate`
-> Activa el entorno virtual en Windows
+2. Abre el Visual Studio Code y Abre la Carpeta ***Preentrega3-Guzman***
 
-instalar Dependencias del Requirements.txt
+3. Abre el Archivo requirements.txt y presiona el botón "crear entorno".
 
-makemigrations
-migrate
+> Una vez ejecutado se debe crear el entorno virtual .venv 
 
+4. Activar el entorno virtual
 
-py manage.py collectstatic
+> En Windows ejecuta `.\venv\Scripts\activate`
+
+> En Mac o Linux ejecuta `source .venv/bin/activate`
+
+5. Abre el terminal en VSC, verifica que el entorno virtual está activo (.venv) 
+
+> Ejecuta `pip list` y verifica que todas las dependencias están instaladas
+
+6. Ingresa en la carpeta project y ejecuta lo siguiente
+
+    ***En Mac cambiar python por python3***
+
+>`python manage.py makemigrations`
+
+>`python manage.py migrate`
+
+7. Por último ejecutar, para ver los archivos statics con el Debug False
+
+> `py manage.py collectstatic`
+
+## BASE DE DATOS
+
+Base de datos de 4 tablas 
+
+![Database Model!](project/apps/GradeApp/static/GradeApp/assets/database.png "Grade App Database")
