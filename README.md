@@ -20,9 +20,9 @@ El sistema permite agregar, Estudiante, Profesor, Matería y Notas.
 
 3. Abre el Archivo requirements.txt dentro de VSCode y presiona el botón "crear entorno".
 
-- Seleccionar el entorno .venv
-- Seleccionar la versión de Python 3.11
-- Seleccionar el archivo requirements.txt
+- primero elegir el entorno virtual `venv`, 
+- luego el intérprete Python (última versión)
+- y finalmente pregunta por las dependencias: elegimos requirements.txt.
 
    Una vez ejecutado se debe crear el entorno virtual .venv 
 
