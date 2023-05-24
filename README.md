@@ -41,8 +41,11 @@ El sistema permite agregar, Estudiante, Profesor, Matería y Notas.
     ***En Mac cambiar python por python3***
 
 > `py manage.py collectstatic` 
+> 
 > `python manage.py makemigrations`
+> 
 > `python manage.py migrate`
+> 
 > `python manage.py runserver`
 
 ## BASE DE DATOS
