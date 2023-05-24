@@ -1,6 +1,14 @@
 # Preentrega3-Guzman - CODERHOUSE
 
-Sistema que permite gestionar las calificaciones de los estudiantes. 
+Aplicación que permite gestionar las calificaciones de los estudiantes. 
+
+## CONSIDERACIONES IMPORTANTES
+
+El sistema permite agregar, Estudiante, Profesor, Matería y Notas. 
+
+- Para agregar Matería tiene que existir al menos un Profesor
+
+- Para Agregar Notas, debe exitir Materias y Alumnos en la base de datos
 
 ## CONFIGURACIÓN
 
@@ -41,3 +49,5 @@ Sistema que permite gestionar las calificaciones de los estudiantes.
 Base de datos de 4 tablas 
 
 ![Database Model!](project/apps/GradeApp/static/GradeApp/assets/database.png "Grade App Database")
+
+
