@@ -20,7 +20,11 @@ El sistema permite agregar, Estudiante, Profesor, Matería y Notas.
 
 3. Abre el Archivo requirements.txt y presiona el botón "crear entorno".
 
-> Una vez ejecutado se debe crear el entorno virtual .venv 
+- Seleccionar el entorno .venv
+- Seleccionar la versión de Python 3.11
+- Seleccionar el archivo requirements.txt
+
+   Una vez ejecutado se debe crear el entorno virtual .venv 
 
 4. Activar el entorno virtual
 
@@ -32,18 +36,13 @@ El sistema permite agregar, Estudiante, Profesor, Matería y Notas.
 
 > Ejecuta `pip list` y verifica que todas las dependencias están instaladas
 
-6. Ahora ejecuta, para ver los archivos statics con el Debug False
-
-> `py manage.py collectstatic`
-
-7. Ingresa en la carpeta project y ejecuta lo siguiente
+6. Ingresa en la carpeta project y ejecuta: 
 
     ***En Mac cambiar python por python3***
 
->`python manage.py makemigrations`
-
->`python manage.py migrate`
-
+> `py manage.py collectstatic` 
+> `python manage.py makemigrations`
+> `python manage.py migrate`
 > `python manage.py runserver`
 
 ## BASE DE DATOS
