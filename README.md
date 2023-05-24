@@ -48,6 +48,10 @@ El sistema permite agregar, Estudiante, Profesor, Matería y Notas.
 > 
 > `python manage.py runserver`
 
+7. Ingresa en el Browser de tu preferencia y ingresa a la siguiente dirección: 
+
+> `http:\\localhost:8000`
+
 ## BASE DE DATOS
 
 Base de datos de 4 tablas 
