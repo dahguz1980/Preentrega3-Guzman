@@ -32,7 +32,11 @@ El sistema permite agregar, Estudiante, Profesor, Matería y Notas.
 
 > Ejecuta `pip list` y verifica que todas las dependencias están instaladas
 
-6. Ingresa en la carpeta project y ejecuta lo siguiente
+6. Ahora ejecuta, para ver los archivos statics con el Debug False
+
+> `py manage.py collectstatic`
+
+7. Ingresa en la carpeta project y ejecuta lo siguiente
 
     ***En Mac cambiar python por python3***
 
@@ -40,9 +44,7 @@ El sistema permite agregar, Estudiante, Profesor, Matería y Notas.
 
 >`python manage.py migrate`
 
-7. Por último ejecutar, para ver los archivos statics con el Debug False
-
-> `py manage.py collectstatic`
+> `python manage.py runserver`
 
 ## BASE DE DATOS
 

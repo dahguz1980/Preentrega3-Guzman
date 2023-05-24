@@ -38,7 +38,7 @@ sys.path.append(str(APPS_DIR))
 SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -148,8 +148,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
-
-ADMIN_ENABLED = False
 
 MESSAGE_TAGS = {
     messages.DEBUG: "alert-secondary",
