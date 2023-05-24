@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block CONTENT %}
+
+<div style="margin: 15px auto; width: 80%;text-align: center;">
+
+    {% include 'includes/form_titles.html' with title='Administrar Estudiantes' subtitle="" %}
+
+    {% include 'includes/success_message.html' %}
+    
+    {% include 'includes/form_links.html' with add_link='GradeApp:add_student' add_label="+ Agregar Nuevo Estudiante" %}
+
+    
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Correo</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for student in students %}
+            <tr>
+                <th scope="row">{{student.id}}</th>
+                <td>{{student.name}}</td>
+                <td>{{student.lastname}}</td>
+                <td>{{student.email}}</td>
+                
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

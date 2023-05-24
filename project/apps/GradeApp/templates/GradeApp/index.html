@@ -14,13 +14,17 @@
                     <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Estudio &middot; Desarrollo &middot; Progreso</div></div>
                     <div class="fs-3 fw-light text-muted">Te ayudamos a </div>
                     <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Gestionar y lograr el éxito académico</span></h1>
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3" style="display: grid !important">
-                        <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html">Estudiante</a>
-                        <a class="btn btn-secondary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="projects.html">Profesor</a>
-                        {% if there_are_teacher %}<a class="btn btn-warning btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="{% url 'GradeApp:subjects' %}">Materia</a>
-                        {% else  %}<a class="btn btn-secondary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder disabled" href="#" role="button"  aria-disabled="true" >Materia *</a>{% endif %}
-                        {% if  there_are_subjets and there_are_students %}<a class="btn btn-info btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="projects.html">Notas</a>
-                        {% else  %}<a class="btn btn-info btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder disabled" role="button"  aria-disabled="true" href="#">Notas **</a>{% endif %}
+                    <div class="d-grid gap-3 d-sm-flex px-10 justify-content-sm-center justify-content-xxl-start mb-3" style="display: grid !important">
+                        <div>
+                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" style="width: 45%;"  href="{% url 'GradeApp:students' %}">Estudiantes</a>
+                            <a class="btn btn-secondary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" style="width: 45%;" href="{% url 'GradeApp:teachers' %}">Profesores</a><br/>
+                        </div>
+                        <div>
+                            {% if there_are_teacher %}<a class="btn btn-warning btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" style="width: 45%;" href="{% url 'GradeApp:subjects' %}">Materias</a>
+                            {% else  %}<a class="btn btn-secondary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder disabled" style="width: 45%;" href="#" role="button"  aria-disabled="true" >Materia *</a>{% endif %}
+                            {% if  there_are_subjets and there_are_students %}<a class="btn btn-info btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" style="width: 45%;" href="{% url 'GradeApp:grades' %}">Notas</a>
+                            {% else  %}<a class="btn btn-info btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder disabled" role="button"  aria-disabled="true" style="width: 45%;" href="#">Notas **</a>{% endif %}
+                        </div>
                     </div>
                 </div>
                 {% if not there_are_subjets or not there_are_students%}<span style="font-size: 11px;color:rgb(137, 31, 31)">* No hay Profesores en la BD <br/> ** No existen Estudiantes y/o Materias en la BD <span>{% endif %}

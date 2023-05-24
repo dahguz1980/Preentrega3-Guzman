@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block CONTENT %}
+
+<div style="margin: 15px auto; width: 80%;text-align: center;">
+
+    {% include 'includes/form_titles.html' with title='Administrar Profesores' subtitle="" %}
+
+    {% include 'includes/success_message.html' %}
+    
+    {% include 'includes/form_links.html' with add_link='GradeApp:add_teacher' add_label="+ Agregar Nuevo Profesor" %}
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Correo</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for teacher in teachers %}
+            <tr>
+                <th scope="row">{{teacher.id}}</th>
+                <td>{{teacher.name}}</td>
+                <td>{{teacher.lastname}}</td>
+                <td>{{teacher.email}}</td>
+                
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

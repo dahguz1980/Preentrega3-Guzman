@@ -6,6 +6,8 @@
 
     {% include 'includes/form_titles.html' with title='Administrar Materias' subtitle="" %}
 
+    {% include 'includes/success_message.html' %}
+
     {% include 'includes/form_links.html' with add_link='GradeApp:add_subject' add_label="+ Agregar Nueva Materia" %}
 
     <table class="table">
@@ -14,6 +16,7 @@
             <th scope="col">#</th>
             <th scope="col">Nombre</th>
             <th scope="col">Descripción</th>
+            <th scope="col">Profesor</th>
         </tr>
         </thead>
         <tbody>
@@ -22,6 +25,7 @@
                 <th scope="row">{{subject.id}}</th>
                 <td>{{subject.name}}</td>
                 <td>{{subject.description}}</td>
+                <td>{{subject.teacher}}</td>
             </tr>
         {% endfor %}
         </tbody>
