@@ -12,13 +12,13 @@ El sistema permite agregar, Estudiante, Profesor, Matería y Notas.
 
 ## CONFIGURACIÓN
 
-1. Clonar el Repositorio
+1. Crea una carpeta en tu computadora y dento de ésta debes clonar el Repositorio
 
 > `git clone https://github.com/dahguz1980/Preentrega3-Guzman.git`
 
 2. Abre el Visual Studio Code y Abre la Carpeta ***Preentrega3-Guzman***
 
-3. Abre el Archivo requirements.txt y presiona el botón "crear entorno".
+3. Abre el Archivo requirements.txt dentro de VSCode y presiona el botón "crear entorno".
 
 - Seleccionar el entorno .venv
 - Seleccionar la versión de Python 3.11
@@ -40,7 +40,7 @@ El sistema permite agregar, Estudiante, Profesor, Matería y Notas.
 
     ***En Mac cambiar python por python3***
 
-> `py manage.py collectstatic` 
+> `python manage.py collectstatic` 
 > 
 > `python manage.py makemigrations`
 > 
